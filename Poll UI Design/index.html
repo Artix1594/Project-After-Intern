@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- Enhanced Poll UI Design with Modern Styling -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Outing Destination Poll</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <i class="fas fa-map-marker-alt"></i>
+      Where should we go for our post-intern adventure?
+    </header>
+    <div class="poll-area">
+      <div class="poll-option" data-option="opt-1" data-park="sunway">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">
+              <i class="fas fa-water"></i>
+              Sunway Lagoon
+            </span>
+          </div>
+          <span class="percent">0%</span>
+        </div>
+        <div class="progress" style='--w:0;'></div>
+        <div class="details-link" data-park="sunway">
+          <i class="fas fa-info-circle"></i>
+          Click to see details
+        </div>
+      </div>
+      <div class="poll-option" data-option="opt-2" data-park="splashmania">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">
+              <i class="fas fa-swimming-pool"></i>
+              Gamuda Cove SplashMania
+            </span>
+          </div>
+          <span class="percent">0%</span>
+        </div>
+        <div class="progress" style='--w:0;'></div>
+        <div class="details-link" data-park="splashmania">
+          <i class="fas fa-info-circle"></i>
+          Click to see details
+        </div>
+      </div>
+      <div class="poll-option" data-option="opt-3" data-park="melaka">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">
+              <i class="fas fa-mountain"></i>
+              Melaka Wonderland Theme Park
+            </span>
+          </div>
+          <span class="percent">0%</span>
+        </div>
+        <div class="progress" style='--w:0;'></div>
+        <div class="details-link" data-park="melaka">
+          <i class="fas fa-info-circle"></i>
+          Click to see details
+        </div>
+      </div>
+      <div class="poll-option" data-option="opt-4" data-park="genting">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">
+              <i class="fas fa-cloud"></i>
+              Genting SkyWorlds Theme Park
+            </span>
+          </div>
+          <span class="percent">0%</span>
+        </div>
+        <div class="progress" style='--w:0;'></div>
+        <div class="details-link" data-park="genting">
+          <i class="fas fa-info-circle"></i>
+          Click to see details
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Click to vote • Results update in real-time</p>
+    </div>
+  </div>
+
+  <!-- Park Details Popup -->
+  <div class="park-details-popup" id="parkDetailsPopup">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h3 class="park-title"></h3>
+        <button class="close-popup" onclick="closePopup()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="popup-body">
+        <div class="detail-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="detail-label">Location:</span>
+          <span class="detail-value" id="location"></span>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-clock"></i>
+          <span class="detail-label">Opening Hours:</span>
+          <span class="detail-value" id="hours"></span>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-ticket-alt"></i>
+          <span class="detail-label">Ticket Price:</span>
+          <div class="detail-value" id="price"></div>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-info-circle"></i>
+          <span class="detail-label">Description:</span>
+          <div class="detail-value" id="description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
